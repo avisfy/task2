@@ -4,72 +4,93 @@
 <head>
     <meta charset="utf-8">
     <title>News</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/article.css">
+    <link rel="stylesheet" href="css/popupAdd.css">
+    <script src="js/popup.js" async></script>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital@1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<header class=" container">
-    <span class="logo">
+<header class="container font-i">
+    <span class="page-head">
         <img src="images/logo.png" style="width: 40px; height: 40px; padding-top: 3px; padding-bottom: 3px">
         <h1>In Focus</h1>
     </span>
 </header>
-<section class="container add-back text-font">
-    <h3>News</h3>
-    <h4>With photos</h4>
-    <div class="add-area">
-        <div class="text-area">
-            <textarea id="news-text" rows="10" placeholder="Add your news"></textarea>
+
+<section class="container desc-back">
+    <h3 class="text-font">News</h3>
+    <h4 class="text-font">With photos</h4>
+
+    <div class="btn-add"> <input type="button" id="n-btn-add" class="btn" onclick="showAdd()" value="Add news!"></div>
+
+    <div class="popup-hide" id="popup">
+        <div class="popup-content">
+            <span id="close">×</span>
+            <div class="news-head">
+                <input placeholder="Head..." id="n-head" class="text-font">
+            </div>
+            <div class="news-text text-font">
+                <textarea id="n-text" class="text-font" rows="10" placeholder="Add your news..."></textarea>
+            </div>
+            <div class="grid1">
+                <div class="news-ref">
+                    <input placeholder="Add ref to image here..." id="n-ref" class="text-font"></div>
+                <div class="news-author text-font">
+                    <input placeholder="Author..." id="n-author">
+                </div>
+                <div class="news-btn-send font-i">
+                    <input type="button" id="n-btn-send" class="btn" value="Send!">
+                </div>
+            </div>
         </div>
-            <span class="inp-auth">
-                <input placeholder="Author..." id="author">
-            </span>
-            <span class="btn-w text-font">
-                <input type="button" id="btn-add" value="Send!">
-            </span>
     </div>
+
 </section>
-<section class="container articles-back text-font">
-        <article>
-            <img src="https://i.ytimg.com/vi/zgizhxBYCig/maxresdefault.jpg" class="image">
-            <div class="overlay">
-                <h5> First post </h5>
-                <div class="text"> Seasons, they will change
-Life will make you grow
-Dreams will make you cry, cry, cry
-Everything is temporary
-Everything will slide</div>
+
+<section class="container articles-back main-color text-font">
+    <article>
+        <img src="https://i.ytimg.com/vi/zgizhxBYCig/maxresdefault.jpg" class="image">
+        <div class="overlay">
+            <h5> First post </h5>
+            <div class="text"> Seasons, they will change
+                Life will make you grow
+                Dreams will make you cry, cry, cry
+                Everything is temporary
+                Everything will slide
             </div>
-        </article>
-        <article>
-            <img src="https://fototips.ru/wp-content/uploads/2018/01/BatwQdjn921-png__880.jpg" class="image">
-            <div class="overlay">
-                <h5> Second post </h5>
-                <div class="text"></div>
-            </div>
-        </article>
-        <article>
-            <img src="https://www.blenda.by/storage/app/media/blog/10ideas/krop/12321.jpg" class="image">
-            <div class="overlay">
-                <h5> Another one post </h5>
-                <div class="text">Long text will be here</div>
-            </div>
-        </article>
+        </div>
+    </article>
+    <article>
+        <img src="https://fototips.ru/wp-content/uploads/2018/01/BatwQdjn921-png__880.jpg" class="image">
+        <div class="overlay">
+            <h5> Second post </h5>
+            <div class="text"></div>
+        </div>
+    </article>
+    <article>
+        <img src="https://www.blenda.by/storage/app/media/blog/10ideas/krop/12321.jpg" class="image">
+        <div class="overlay">
+            <h5> Another one post </h5>
+            <div class="text">Long text will be here</div>
+        </div>
+    </article>
     <article>
         <img src="https://bigpicture.ru/wp-content/uploads/2014/08/BnWphotos36.jpg" class="image">
         <div class="overlay">
             <h5> post </h5>
             <div class="text">It's just another damn part, don't let it get the best of you
-It's only up from the floor, light everything inside of you
-Don't burn out, don't burn out on me
-Don't burn out, don't burn out on me</div>
+                It's only up from the floor, light everything inside of you
+                Don't burn out, don't burn out on me
+                Don't burn out, don't burn out on me
+            </div>
         </div>
     </article>
 </section>
 
-<footer class="container text-font">Designed by Ekaterina&copy;, 2020.</footer>
+<footer class="container main-color text-font">Designed by Ekaterina&copy;, 2020.</footer>
 </body>
 
 </html>

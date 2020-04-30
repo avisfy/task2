@@ -1,0 +1,143 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*-----------------------------------------------------*/
+.main-color {
+    background-color: #ebedea;
+}
+
+.font-i {
+    font-family: 'Philosopher', sans-serif;
+}
+
+.text-font {
+    font-family: 'Abel', sans-serif;
+}
+
+.desc-back h3 {
+    font-size: 35px;
+    padding-top: 80pt;
+    padding-bottom: 30pt;
+}
+
+.desc-back h4 {
+    font-size: 28px;
+    padding-bottom: 120pt;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15% 0 15%;
+}
+
+header {
+    background-color: #4e5560;
+    font-size: 45px;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    font-size: 18px;
+}
+
+.articles-back, footer{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/*-------------page head-----*/
+.page-head {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 220px;
+    text-align: left;
+}
+
+.desc-back {
+    background-image: url("../images/f3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*---------- articles table---------------*/
+.articles-back {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    padding-bottom: 5%;
+}
+
+/*-----------buttons----------------- */
+.btn {
+    outline: none;
+    background-color: #c0b6c1;
+    font-family: 'Philosopher', sans-serif;
+}
+
+#n-btn-add {
+    font-size: 25px;
+    width: 400px;
+    padding: 8px 0 8px 0;
+    margin-bottom: 40pt;
+}
+
+
+
+
