@@ -1,4 +1,5 @@
 /* ----------------add news-----------------*/
+
 .popup-show {
     display: block;
     position: fixed;
@@ -9,18 +10,18 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .popup-hide {
     display: none;
 }
 
-.popup-content{
+.popup-content {
     display: grid;
-    grid-template-areas: "d cl" "head e" "area e" "g1 e" ;
+    grid-template-areas: "d cl" "head e" "area e" "g1 e";
     grid-template-columns: 5fr 30px;
-    grid-template-rows:  30px 0.5fr 5fr 1fr;
+    grid-template-rows: 30px 0.5fr 5fr 1fr;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
     background-color: #fefefe;
@@ -30,7 +31,7 @@
     width: 40%;
 }
 
-.grid1{
+.grid1 {
     grid-area: g1;
     display: grid;
     grid-template-columns: 2fr 1fr 0.8fr;
@@ -53,6 +54,7 @@ div input, div textarea {
     font-weight: bold;
     text-align: center;
 }
+
 #close:hover,
 #close:focus {
     color: #000;
@@ -71,19 +73,20 @@ div input, div textarea {
     width: 100%;
 }
 
-
-.news-author {
-    width: 100%;
-}
-.news-ref {
-    width: 100%;
-}
-
-
 #n-text {
     resize: none;
     overflow-y: auto;
 }
+
+
+.news-author {
+    width: 100%;
+}
+
+.news-ref {
+    width: 100%;
+}
+
 
 #n-btn-send {
     font-size: 20px;

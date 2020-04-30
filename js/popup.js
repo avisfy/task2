@@ -5,14 +5,15 @@ function showAdd() {
     popup.className = "popup-show";
 }
 
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == popup) {
         closePopup();
     }
 }
-closeSpan.onclick = function() {
+closeSpan.onclick = function () {
     closePopup();
 }
+
 function closePopup() {
     popup.className = "popup-hide";
 }
