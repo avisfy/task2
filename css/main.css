@@ -83,6 +83,14 @@ table {
     padding: 0 15% 0 15%;
 }
 
+/*-------------page head---------------*/
+.page-head {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 220px;
+    text-align: left;
+}
+
 header {
     background-color: #4e5560;
     font-size: 45px;
@@ -96,22 +104,15 @@ header {
     padding-bottom: 3px;
 }
 
+
 footer {
     text-align: center;
     font-size: 18px;
 }
 
-.articles-back, footer{
+.articles-back, footer {
     padding-top: 50px;
     padding-bottom: 50px;
-}
-
-/*-------------page head-----*/
-.page-head {
-    display: grid;
-    grid-template-columns: auto auto;
-    width: 220px;
-    text-align: left;
 }
 
 .desc-back {
@@ -141,6 +142,11 @@ footer {
     background-color: #c0b6c1;
     font-family: 'Philosopher', sans-serif;
 }
+
+.btn:hover {
+    background-color: #b8a8ba;
+}
+
 
 
 

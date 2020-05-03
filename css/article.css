@@ -26,18 +26,20 @@ article {
     width: 100%;
     height: 70px;
     transition: .3s ease-out;
+    overflow-y: auto;
 }
 
 .text {
     display: none;
 }
 
+
 .overlay h5 {
     color: black;
-    font-size: 20px;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 22px;
     overflow: hidden;
     text-align: center;
-    padding: 20px 20px;
 }
 
 article:hover .overlay {
@@ -47,10 +49,27 @@ article:hover .overlay {
 
 article:hover .text {
     display: block;
+    position: relative;
     white-space: pre-wrap;
     color: black;
     font-size: 20px;
     overflow: hidden;
-    text-align: center;
-    padding: 20px 20px;
+}
+
+.overlay-content {
+    padding: 20px 20px 20px 20px;
+}
+
+.footer-auth {
+    position: absolute;
+    font-size: 18px;
+    left: 20px;
+    bottom: 20px;
+}
+
+.footer-date {
+    position: absolute;
+    font-size: 18px;
+    right: 20px;
+    bottom: 20px;
 }

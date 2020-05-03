@@ -1,44 +1,29 @@
 /* ----------------add news-----------------*/
-
-.popup-show {
-    display:block;
-    position:relative;
-    bottom: 0;
+.popup {
+    display: block;
+    position: relative;
+    bottom: -310px;
     box-sizing: border-box;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
     background-color: #fefefe;
-    animation-name: move-up;
-    animation-duration: 0.6s;
     width: 85%;
     height: 350px;
     margin: 0 5% 0 5%;
+    border-radius: 20px 10px 0 0;
+}
+
+.popup-show {
+    bottom: 0;
+    animation-name: move-up;
+    animation-duration: 0.6s;
 }
 
 .popup-hide {
-    display:block;
-    position: relative;
     bottom: -310px;
-    box-sizing: border-box;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-    background-color: #fefefe;
     animation-name: move-down;
     animation-duration: 0.6s;
-    width: 85%;
-    height: 350px;
-    margin: 0 5% 0 5%;
 }
 
-.popup-static {
-    display:block;
-    position: relative;
-    bottom: -310px;
-    box-sizing: border-box;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-    background-color: #fefefe;
-    width: 85%;
-    height: 350px;
-    margin: 0 5% 0 5%;
-}
 
 .popup-content {
     display: grid;
@@ -46,18 +31,26 @@
     grid-template-rows: 1fr 5fr 1fr;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
-    padding: 30px 30px 30px 30px;
+    padding: 25px 25px 25px 25px;
     width: 100%;
 }
 
 @keyframes move-up {
-    from {bottom: -310px;}
-    to {bottom: 0;}
+    from {
+        bottom: -310px;
+    }
+    to {
+        bottom: 0;
+    }
 }
 
 @keyframes move-down {
-    from {bottom: 0;}
-    to {bottom: -310px;}
+    from {
+        bottom: 0;
+    }
+    to {
+        bottom: -310px;
+    }
 }
 
 .grid1 {
@@ -102,6 +95,7 @@ div input, div textarea {
     font-size: 25px;
     width: 100%;
     height: 40px;
+    border-radius: 20px 10px 0 0;
 }
 
 #n-btn-send {
