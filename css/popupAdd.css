@@ -1,42 +1,71 @@
 /* ----------------add news-----------------*/
 
 .popup-show {
-    display: block;
-    position: fixed;
-    z-index: 1;
-    padding-top: 10%;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    display:block;
+    position:relative;
+    bottom: 0;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    background-color: #fefefe;
+    animation-name: move-up;
+    animation-duration: 0.6s;
+    width: 85%;
+    height: 350px;
+    margin: 0 5% 0 5%;
 }
 
 .popup-hide {
-    display: none;
+    display:block;
+    position: relative;
+    bottom: -310px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    background-color: #fefefe;
+    animation-name: move-down;
+    animation-duration: 0.6s;
+    width: 85%;
+    height: 350px;
+    margin: 0 5% 0 5%;
+}
+
+.popup-static {
+    display:block;
+    position: relative;
+    bottom: -310px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    background-color: #fefefe;
+    width: 85%;
+    height: 350px;
+    margin: 0 5% 0 5%;
 }
 
 .popup-content {
     display: grid;
-    grid-template-areas: "d cl" "head e" "area e" "g1 e";
-    grid-template-columns: 5fr 30px;
-    grid-template-rows: 30px 0.5fr 5fr 1fr;
+    box-sizing: border-box;
+    grid-template-rows: 1fr 5fr 1fr;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0 0 30px 30px;
-    border: 1px solid #888;
-    width: 40%;
+    padding: 30px 30px 30px 30px;
+    width: 100%;
+}
+
+@keyframes move-up {
+    from {bottom: -310px;}
+    to {bottom: 0;}
+}
+
+@keyframes move-down {
+    from {bottom: 0;}
+    to {bottom: -310px;}
 }
 
 .grid1 {
-    grid-area: g1;
     display: grid;
     grid-template-columns: 2fr 1fr 0.8fr;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
+    width: 100%;
 }
 
 div input, div textarea {
@@ -47,29 +76,12 @@ div input, div textarea {
     height: 100%;
 }
 
-#close {
-    grid-area: cl;
-    color: #aaaaaa;
-    font-size: 28px;
-    font-weight: bold;
-    text-align: center;
-}
-
-#close:hover,
-#close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
 .news-head {
-    grid-area: head;
     width: 100%;
 }
 
 
 .news-text {
-    grid-area: area;
     width: 100%;
 }
 
@@ -77,7 +89,6 @@ div input, div textarea {
     resize: none;
     overflow-y: auto;
 }
-
 
 .news-author {
     width: 100%;
@@ -87,7 +98,13 @@ div input, div textarea {
     width: 100%;
 }
 
+#n-btn-add {
+    font-size: 25px;
+    width: 100%;
+    height: 40px;
+}
 
 #n-btn-send {
     font-size: 20px;
+    width: 100%;
 }

@@ -15,7 +15,7 @@
 <body>
 <header class="container font-i">
     <span class="page-head">
-        <img src="images/logo.png" style="width: 40px; height: 40px; padding-top: 3px; padding-bottom: 3px">
+        <img src="images/logo.png" class="logo">
         <h1>In Focus</h1>
     </span>
 </header>
@@ -23,12 +23,10 @@
 <section class="container desc-back">
     <h3 class="text-font">News</h3>
     <h4 class="text-font">With photos</h4>
-
-    <div class="btn-add"><input type="button" id="n-btn-add" class="btn" onclick="showAdd()" value="Add news!"></div>
-
-    <div class="popup-hide" id="popup">
+    <div class="popup-static" id="popup">
+        <div>
+            <input type="button" id="n-btn-add" class="btn" onclick="popupAction()" value="Add news!"></div>
         <div class="popup-content">
-            <span id="close">×</span>
             <div class="news-head">
                 <input placeholder="Head..." id="n-head" class="text-font">
             </div>
@@ -47,6 +45,7 @@
             </div>
         </div>
     </div>
+
 
 </section>
 

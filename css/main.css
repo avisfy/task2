@@ -69,13 +69,13 @@ table {
 
 .desc-back h3 {
     font-size: 35px;
-    padding-top: 80pt;
-    padding-bottom: 30pt;
+    padding-top: 70px;
+    padding-bottom: 30px;
 }
 
 .desc-back h4 {
     font-size: 28px;
-    padding-bottom: 120pt;
+    padding-bottom: 20px;
 }
 
 .container {
@@ -87,6 +87,13 @@ header {
     background-color: #4e5560;
     font-size: 45px;
     color: white;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 footer {
@@ -108,6 +115,7 @@ footer {
 }
 
 .desc-back {
+    position: relative;
     background-image: url("../images/f3.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -117,6 +125,9 @@ footer {
 
 /*---------- articles table---------------*/
 .articles-back {
+    position: relative;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 1);
+    z-index: 1;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     grid-column-gap: 30px;
@@ -129,13 +140,6 @@ footer {
     outline: none;
     background-color: #c0b6c1;
     font-family: 'Philosopher', sans-serif;
-}
-
-#n-btn-add {
-    font-size: 25px;
-    width: 400px;
-    padding: 8px 0 8px 0;
-    margin-bottom: 40pt;
 }
 
 
