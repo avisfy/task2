@@ -127,7 +127,7 @@ footer {
 /*---------- articles table---------------*/
 .articles-back {
     position: relative;
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 1);
+    box-shadow: 0px -7px 9px 0px rgba(50, 50, 50, 0.43);
     z-index: 1;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));

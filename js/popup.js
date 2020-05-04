@@ -1,8 +1,9 @@
 "use strict"
 debugger
+
 let popup = document.getElementById("popup-w");
 
-function popupAction() {
+function onAddNews() {
 
     if (popup.classList.contains("popup-show")) {
         popup.classList.remove("popup-show");
