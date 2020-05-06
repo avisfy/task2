@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/article.css">
     <link rel="stylesheet" href="css/popupAdd.css">
-    <script src="js/popup.js" async></script>
-    <script src="js/addNews.js" async></script>
+    <script src="js/scripts.js" async type="module"></script>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital@1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Advent+Pro&display=swap" rel="stylesheet">
@@ -30,19 +29,21 @@
             <input type="button" id="n-btn-add" class="btn" onclick="onAddNews()" value="Add news!"></div>
         <div class="popup-content">
             <div class="news-head">
-                <input placeholder="Head..." id="n-head" class="text-font">
+                <input placeholder="Head..." id="n-head" class="text-font" oninput="onInputFull()">
             </div>
-            <div class="news-text text-font">
-                <textarea id="n-text" class="text-font" rows="10" placeholder="Add your news..."></textarea>
+            <div class="news-text">
+                <textarea id="n-text" class="text-font" rows="10" placeholder="Add your news..."
+                          oninput="onInputFull()"></textarea>
             </div>
             <div class="grid1">
                 <div class="news-ref">
-                    <input placeholder="Add ref to image here..." id="n-ref" class="text-font"></div>
-                <div class="news-author text-font">
-                    <input placeholder="Author..." id="n-author">
+                    <input placeholder="Add ref to image here..." id="n-ref" class="text-font" oninput="onInputFull()">
+                </div>
+                <div class="news-author">
+                    <input placeholder="Author..." id="n-author" oninput="onInputFull()">
                 </div>
                 <div class="news-btn-send font-i">
-                    <input type="button" id="n-btn-send" class="btn" onclick="onSend()" value="Send!">
+                    <input type="button" id="n-btn-send" class="btn" onclick="onSend()" value="Send!" disabled>
                 </div>
             </div>
         </div>
