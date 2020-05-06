@@ -1,20 +1,20 @@
 "use strict"
-debugger
+import {createBlock} from "./blocks.js";
+import {createImageBlock} from "./blocks.js";
+import {hide} from "./common.js";
 
-let popup1 = document.getElementById("popup-w");
 
-function onSend() {
-    let newPost = getPostObject();
-    let newArticle = createNewPost(newPost);
-    let lastArticle = document.querySelector(".articles-back > article:last-child");
+export function send() {
+    const popup = document.getElementById("popup-w");
+    const newPost = getPostObject();
+    const newArticle = createNewPost(newPost);
+    const lastArticle = document.querySelector(".articles-back > article:last-child");
     lastArticle.after(newArticle);
-    console.log(document.body.innerHTML);
-    console.log("CREATED");
-    console.log(newArticle.innerHTML);
-    popup1.classList.add("popup-hide");
+    hide(popup);
     document.getElementById("n-btn-add").value = "Add news!";
     clearInputs();
 }
+
 
 function getPostObject() {
     let newsHead = document.getElementById("n-head").value;
@@ -31,40 +31,35 @@ function getPostObject() {
     };
 }
 
-function createNewPost(postData) {
-    let headBlock = document.createElement("h5");
-    headBlock.textContent = postData.newsHead;
 
-    let textBlock = document.createElement("div");
-    textBlock.className = "text";
+function createNewPost(postData) {
+    debugger
+    const datestring = `${postData.date.getDate()}/${postData.date.getMonth()}/${postData.date.getFullYear()}`;
+
+    const headBlock = createBlock("h5", postData.newsHead);
+    const textBlock = createBlock("div", "", "text");
     textBlock.innerHTML = `<div>${postData.newsText}</div>`;
-    let author = document.createElement("span");
-    author.textContent = postData.author;
-    author.className = "footer-auth";
-    let date = document.createElement("span");
-    date.textContent = `${postData.date.getDate()}/${postData.date.getMonth()}/${postData.date.getFullYear()}`;
-    date.className = "footer-date";
+
+    const author = createBlock("span", postData.author, "footer-auth");
+    const date = createBlock("span", datestring, "footer-date");
     textBlock.appendChild(author);
     textBlock.appendChild(date);
 
-    let overlayContent = document.createElement("div");
-    overlayContent.className = "overlay-content";
+    const overlayContent = createBlock("div", "", "overlay-content");
     overlayContent.appendChild(headBlock);
     overlayContent.appendChild(textBlock);
 
-    let overlay = document.createElement("div");
-    overlay.className = "overlay";
+    const overlay = createBlock("div", "", "overlay");
     overlay.appendChild(overlayContent);
 
-    let imageBlock = document.createElement("img");
-    imageBlock.className = "image";
-    imageBlock.setAttribute("src", postData.ref);
+    const imageBlock = createImageBlock("image", postData.ref);
 
-    let articleBlock = document.createElement("ARTICLE");
+    const articleBlock = createBlock("article", "");
     articleBlock.appendChild(imageBlock);
     articleBlock.appendChild(overlay);
     return articleBlock;
 }
+
 
 function clearInputs() {
     document.getElementById("n-head").value = "";

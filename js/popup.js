@@ -1,21 +1,35 @@
 "use strict"
-debugger
+import * as operations from "./common.js";
 
-let popup = document.getElementById("popup-w");
+const btn = operations.btnAdd;
 
-function onAddNews() {
 
+ export function onAdd() {
+    const popup = document.getElementById("popup-w");
+    checkEmpty();
+    //if open and clicked "close"
     if (popup.classList.contains("popup-show")) {
-        popup.classList.remove("popup-show");
-        popup.classList.add("popup-hide");
-        document.getElementById("n-btn-add").value = "Add news!";
-    } else if (popup.classList.contains("popup-hide")) {
-        popup.classList.remove("popup-hide");
+        operations.hide(popup);
+    } //if closed and "open" clicked
+    else if (popup.classList.contains("popup-hide")) {
+        operations.show(popup);
+    } //if closed by default
+    else {
         popup.classList.add("popup-show");
-        document.getElementById("n-btn-add").value = "Close";
-    } else {
-        popup.classList.add("popup-show");
-        document.getElementById("n-btn-add").value = "Close";
+        btn.value = "Close";
     }
 }
 
+export function checkEmpty() {
+    debugger;
+    const btnSend = document.getElementById("n-btn-send");
+    let newsHead = document.getElementById("n-head").value;
+    let newsText = document.getElementById("n-text").value;
+    let ref = document.getElementById("n-ref").value;
+    let author = document.getElementById("n-author").value;
+    if (newsHead && newsText && ref && author) {
+        btnSend.removeAttribute("disabled");
+    } else {
+        btnSend.setAttribute("disabled", "");
+    }
+}
