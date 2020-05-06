@@ -10,10 +10,9 @@ export function createBlock(tag, text, classname) {
 }
 
 export function createImageBlock(classname, ref) {
-    debugger;
     const imageBlock = document.createElement("img");
     imageBlock.className = classname;
     imageBlock.src = ref;
-    imageBlock.onerror = () => imageBlock.src = "images/errorimg.jpg";
+    imageBlock.onerror = () => this.src = "images/errorimg.jpg";
     return imageBlock;
 }
