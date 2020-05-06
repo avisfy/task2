@@ -13,6 +13,6 @@ export function createImageBlock(classname, ref) {
     const imageBlock = document.createElement("img");
     imageBlock.className = classname;
     imageBlock.src = ref;
-    imageBlock.onerror = () => this.src = "images/errorimg.jpg";
+    imageBlock.onerror = () => imageBlock.src = "images/errorimg.jpg";
     return imageBlock;
 }
