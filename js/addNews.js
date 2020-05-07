@@ -11,8 +11,15 @@ export function send() {
     const lastArticle = document.querySelector(".articles-back > article:last-child");
     lastArticle.after(newArticle);
     hide(popup);
-    document.getElementById("n-btn-add").value = "Add news!";
     clearInputs();
+}
+
+export function sendLoad(postObj) {
+    const popup = document.getElementById("popup-w");
+    const newArticle = createNewPost(postObj);
+    const lastArticle = document.querySelector(".articles-back > article:last-child");
+    lastArticle.after(newArticle);
+    hide(popup);
 }
 
 
@@ -33,7 +40,6 @@ function getPostObject() {
 
 
 function createNewPost(postData) {
-    debugger
     const datestring = `${postData.date.getDate()}/${postData.date.getMonth()}/${postData.date.getFullYear()}`;
 
     const headBlock = createBlock("h5", postData.newsHead);

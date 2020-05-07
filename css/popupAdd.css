@@ -28,7 +28,7 @@
 .popup-content {
     display: grid;
     box-sizing: border-box;
-    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 1fr 5fr 1fr;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
     padding: 25px 25px 25px 25px;
@@ -53,12 +53,21 @@
     }
 }
 
-.grid1 {
+.grid-bot {
     display: grid;
     grid-template-columns: 2fr 1fr 0.8fr;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
     width: 100%;
+}
+
+.grid-load {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    width: 100%;
+    padding-bottom: 10px;
 }
 
 div input, div textarea {

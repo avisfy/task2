@@ -28,14 +28,22 @@
         <div>
             <input type="button" id="n-btn-add" class="btn" onclick="onAddNews()" value="Add news!"></div>
         <div class="popup-content">
+            <div class="grid-load">
+                <div class="load-number">
+                    <input placeholder="Number..." type="number" id="n-number" class="text-font" oninput="onLoadInputFull()">
+                </div>
+                <div class="news-btn-send font-i">
+                    <input type="button" id="n-btn-load" class="btn" onclick="onLoadNews()" value="Load!" disabled>
+                </div>
+            </div>
             <div class="news-head">
                 <input placeholder="Head..." id="n-head" class="text-font" oninput="onInputFull()">
             </div>
             <div class="news-text">
-                <textarea id="n-text" class="text-font" rows="10" placeholder="Add your news..."
+                <textarea id="n-text" class="text-font" rows="8" placeholder="Add your news..."
                           oninput="onInputFull()"></textarea>
             </div>
-            <div class="grid1">
+            <div class="grid-bot">
                 <div class="news-ref">
                     <input placeholder="Add ref to image here..." id="n-ref" class="text-font" oninput="onInputFull()">
                 </div>

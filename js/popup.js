@@ -7,6 +7,7 @@ const btn = operations.btnAdd;
  export function onAdd() {
     const popup = document.getElementById("popup-w");
     checkEmpty();
+     checkNumberEmpty();
     //if open and clicked "close"
     if (popup.classList.contains("popup-show")) {
         operations.hide(popup);
@@ -18,6 +19,7 @@ const btn = operations.btnAdd;
         popup.classList.add("popup-show");
         btn.value = "Close";
     }
+
 }
 
 export function checkEmpty() {
@@ -30,5 +32,15 @@ export function checkEmpty() {
         btnSend.removeAttribute("disabled");
     } else {
         btnSend.setAttribute("disabled", "");
+    }
+}
+
+export function checkNumberEmpty() {
+    const btnLoad = document.getElementById("n-btn-load");
+    let number = document.getElementById("n-number").value;
+    if (number) {
+        btnLoad.removeAttribute("disabled");
+    } else {
+        btnLoad.setAttribute("disabled", "");
     }
 }
