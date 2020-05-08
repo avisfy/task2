@@ -4,10 +4,11 @@ import * as operations from "./common.js";
 const btn = operations.btnAdd;
 
 
- export function onAdd() {
+export function onAdd() {
     const popup = document.getElementById("popup-w");
     checkEmpty();
-     checkNumberEmpty();
+    checkNumberEmpty();
+
     //if open and clicked "close"
     if (popup.classList.contains("popup-show")) {
         operations.hide(popup);
@@ -24,10 +25,11 @@ const btn = operations.btnAdd;
 
 export function checkEmpty() {
     const btnSend = document.getElementById("n-btn-send");
-    let newsHead = document.getElementById("n-head").value;
-    let newsText = document.getElementById("n-text").value;
-    let ref = document.getElementById("n-ref").value;
-    let author = document.getElementById("n-author").value;
+    const newsHead = document.getElementById("n-head").value;
+    const newsText = document.getElementById("n-text").value;
+    const ref = document.getElementById("n-ref").value;
+    const author = document.getElementById("n-author").value;
+
     if (newsHead && newsText && ref && author) {
         btnSend.removeAttribute("disabled");
     } else {
@@ -37,7 +39,8 @@ export function checkEmpty() {
 
 export function checkNumberEmpty() {
     const btnLoad = document.getElementById("n-btn-load");
-    let number = document.getElementById("n-number").value;
+    const number = document.getElementById("n-number").value;
+
     if (number) {
         btnLoad.removeAttribute("disabled");
     } else {

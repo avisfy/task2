@@ -4,22 +4,19 @@ import {createImageBlock} from "./blocks.js";
 import {hide} from "./common.js";
 
 
-export function send() {
+export function send(postObj) {
     const popup = document.getElementById("popup-w");
-    const newPost = getPostObject();
-    const newArticle = createNewPost(newPost);
+    let newArticle;
+    if (postObj) {
+        newArticle = createNewPost(postObj);
+    } else {
+        const newPost = getPostObject();
+        newArticle = createNewPost(newPost);
+    }
     const lastArticle = document.querySelector(".articles-back > article:last-child");
     lastArticle.after(newArticle);
     hide(popup);
     clearInputs();
-}
-
-export function sendLoad(postObj) {
-    const popup = document.getElementById("popup-w");
-    const newArticle = createNewPost(postObj);
-    const lastArticle = document.querySelector(".articles-back > article:last-child");
-    lastArticle.after(newArticle);
-    hide(popup);
 }
 
 

@@ -1,6 +1,6 @@
 "use strict"
 
-import {sendLoad} from "./addNews.js";
+import {send} from "./addNews.js";
 
 export function postAll() {
     const numberInput = document.getElementById("n-number");
@@ -9,25 +9,27 @@ export function postAll() {
     loadPopup.classList.add("popup-loading-show");
     const numberNews = Number(numberInput.value);
     const address = `https://jsonplaceholder.typicode.com/posts?_limit=${numberNews}`;
-    fetch(address).then(response => response.json())
-            .then(post => {
-                for(let currentPost of post) {
-                    const newsHead = currentPost["title"];
-                    const newsText = currentPost["body"];
+    fetch(address)
+        .then(response => response.json())
+        .then(posts => {
+            posts.map(post => {
+                    const newsHead = post.title;
+                    const newsText = post.body;
                     const ref = "images/loaded.jpg";
-                    const author = currentPost["userId"];
+                    const author = post.userId;
                     const date = new Date();
-                    const postObj =  {
+                    const postObj = {
                         newsHead,
                         newsText,
                         ref,
                         author,
                         date
                     };
-                    sendLoad(postObj);
+                    send(postObj);
                 }
-                loadPopup.classList.remove("popup-loading-show");
-                loadPopup.classList.add("popup-loading-hide");
-                numberInput.value ="";
-            });
+            )
+            loadPopup.classList.remove("popup-loading-show");
+            loadPopup.classList.add("popup-loading-hide");
+            numberInput.value = "";
+        });
 }
